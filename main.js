@@ -147,7 +147,10 @@ function guessMyNumber(n) {
         } else if (n === randomInt) {
             highScore = nTimes;
             if (nTimes === 1) {
-                return 'You guessed my number in 1 guess.';
+                return 'High Score!\nYou guessed my number in 1 guess.';
+            } else if (nTimes < highScore) {
+                highScore = nTimes;
+                return 'New High Score!' + highScore + '\nYou guessed my number in ' + nTimes + ' guesses';
             }
             return 'You guessed my number in ' + nTimes + ' guesses';
         }
